@@ -92,6 +92,14 @@ Meanwhile, you can open Dendron's markdown preview by clicking the preview butto
 
 ![Markdown preview](https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/trouble-md.png)
 
+### Why don't I see my SVG image?
+
+Webview, the browser component VSCode uses for MPE, does not support SVG images, but they will appear in your published/hosted notes.
+
+### Why do I see an Alert instead of the "poster" for a video?
+
+Webview, the browser component VSCode uses for MPE, does not support the playing of any videos, it will display the "start-poster", (if one is specified), which will open the video in your default browser when clicked.  The Alert displays when no poster has been specified.
+
 ## Misc
 
 ### Why does Dendron create `root.*` files in my vault?
