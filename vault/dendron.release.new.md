@@ -2,69 +2,95 @@
 id: 2e9cebfa-a93b-43b9-8065-9259d969f269
 title: New
 desc: ''
-updated: 1603080088933
+updated: 1604248886710
 created: 1603080088933
 published: false
 nav_exclude: true
 ---
 
-# 2020-10-19 Release Notes (version 0.13)
+# 2020-11-01 Release Notes (version 0.14)
 
-Dendron 0.13 is here 🌱
+Dendron 0.14 is here 🌱
 
-It's been a few weeks since the last minor release. Below are some highlights of this sprint:
+At 14, Dendron might not yet be old enough to vote (if you are old enough and in the USA, please do that next week) but it is coming out of **preview** 🥳
 
-## Highlights
-- move to the final phase of the [[server migration|dendron.roadmap.project.n.2020.server-migration]] 
-    - Dendron server mode is now at feature parity with existing functionality 
-    - the server migration is a complete re-write of Dendron's internal to go from a client to client (local) server model
-    - this is pre-requisite for a bunch of upcoming features like [[multi vault support|dendron.roadmap.project.n.2020.multi-vault]], rich graphical interfaces, and realtime graph updates
-    - server mode will be the default for all workspaces going forward
-    - existing workspaces will be transparently migrated over after next week
-- order of magnitude speed improvements (server mode only)
-    - initializing large vaults
-    - updating links through `Rename` and `Refactor` operations 
-- better note references
-    - note references can now be nested 
-    - a reference to a header can be made by selecting any part of the header before running `Copy Note Ref`
-- better timestamps (server mode only)
-    - the `updated` timestamp on notes now updates on every save
-    - timestamp will now print a human friendly label 
-- improved publishing
-    - dendron sites now support latex
-    - dendron will generate a bad link report for all links that do not resolve when publishing
-    - bad links will now resolve to a custom 404 link
-    - you can define a custom site repository that will be used by publishing commands
-- consolidated lookup
-    - creating journal notes and scratch notes are now part of the `Lookup Command` instead of being separate commands (the old keyboard shortcuts still work - they now map to lookup commands with custom arguments)
-    - lookup now accepts arguments that can be passed in via custom keyboard shortcuts
-    - you can control the creation of special notes as well as note selection behavior from lookup
+Concretely, this means a few things:
+1. Dendron is announcing our **[Environmentalist](https://accounts.dendron.so/account/subscribe)** plan, a 100% optional monthly subscription for users who like to support us financially
+1. Dendron will now commit to a regular release cycle. New releases will go out at the beginning of every week. **Environmentalist** will get access to early builds and features every few days. 
+1. Dendron will have a deprecation policy for all non-experimental (🚧) features. Any potentially breaking changes will first be deprecated and users will have at least a week's notice before a breaking change is made. 
+1. Dendron is dropping the preview label 
+    ![](https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/preview.png)
 
-## Seeds
+As part of getting out of preview, we are launching on [Product Hunt](https://www.producthunt.com/posts/dendron), a popular online catalogue for new products. If Dendron has been helpful in your life, we would appreciate it 🙏 if you could leave us some comments there. This will help new people discover our community!
 
-Aside from features, we've also launched two [[seeds|dendron.topic.seeds]]. Seeds are **open source dendron sites** that **consolidate reference material** about a **particular vertical**. Content from the catalogues is derived from existing open source content as well as manual user input. Your 🙏 is welcomed and encouraged. 
+<a href="https://www.producthunt.com/posts/dendron?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dendron" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=273037&theme=light" alt="Dendron - A better way to know | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-((ref: [[dendron.showcase]]#open pkm catalogue,1:#*))
-((ref: [[dendron.showcase]]#open aws catalogue,1:#*))
+## Table of Contents
 
-## Sustainability
 
-Finally, a bunch of you have asked if you can support Dendron financially. The answer is coming at the end of the month! Dendron will be coming out of **preview** in November, at which point we will launch our **Environmentalist Plan** 🌲. This is a monthly subscription to support the development of Dendron. **Environmentalist** will get a special badge on Discord, priority email/discord access to the development team, and stickers! More details on this soon.
+### Highlights
+- complete [[server migration|dendron.roadmap.project.n.2020.server-migration]] for all users
+- create [[snapshots|dendron.topic.capabilities.snapshot]] of your vault and restore them back to a specific point in time
+- introduce [Environmentalist Plans](https://accounts.dendron.so/account/subscribe) for folks that want to support Dendron financially
+- add [publishing](https://dendron.so/notes/66727a39-d0a7-449b-a10d-f6c438185d7f.html#publish) capability to pods (with ability to publish to json and regular markdown)
+- support creating generated [table of contents](https://dendron.so/notes/ffa6a4ba-5eda-48c7-add5-8e2333ba27b4.html#toc) when publishing
+- realtime schema validation when saving
+- numerous enhancements 
+- numerous bug fixes 
+- better handling of errors and failures 
 
-## Thank You
+### Community
+- new roles
+    - introduce the **Environmentalist** role, created for folks that are keeping Dendron sustainable through a monthly contribution
+        * Britt Selvitelle (@britt#3020)
+        * Tom Diaz (@TomD#7339)
+        * Kiran Pathakota (@kpats#8761)
+        * Cristian Caratti (@ccaratti#2465)
+        * Ken Sonoda (@ksoda#9504)
+        * Adam Howard (@A Howard#8010)
+        * Ladd Hoffmab (@Bassmann#5300)
+        * Fayçal MITIDJI (@bsqrd#9701)
+        * Tyler Nieman (@tsnieman#6157)
+        * Ilana Lin (@ilana#7242)
+        * Luke Roslanowski (@lukecarrier#2081)
+        * Huw Millar 
+        * Martin Stemplinger
+
+    - introducing the **Horticulturalist** role, created for folks who have contributed to the Dendron code base
+        * Britt Selvitelle (@britt#3020)
+        * Luke Roslanowski (@lukecarrier#2081)
+- we now have a new [[community|dendron.community]] section on our website that highlights the work and roles of our members
+
+### House Keeping 
+- `dendron.noServerMode` setting has been removed
+- Dendron docs has been re-organized to be less overwhelming (if you have an links bookmarked, they will still all work because of Dendron's [permanent links](https://dendron.so/notes/5fcb8564-7209-4a80-9bb8-025bc8eb489b.html#permanent-ids))
+
+![](https://foundation-prod-assetspublic53c57cce-8cpvgjldwysl.s3-us-west-2.amazonaws.com/assets/images/release.refactor.jpg)
+
+### Upcoming
+
+- Dendron office hours: this will be additional slots you can book outside of the initial onboarding to go over specific workflows. More details and schedule to follow in next week's release! 
+- Dendron [[Multi Vault Support|dendron.roadmap.project.n.2020.multi-vault]]
+- Better migration workflows from other tools into Dendron
+
+### Thanks
 
 Last and most of all, a big **thanks** to the following gardeners that brought up issues, contributions, and fixes to this release.
+
 - [Britt](https://github.com/bs)
-    - [silent log errors](https://github.com/dendronhq/dendron/issues/277)
-    - various doc updates 
-- [onwijsbegeerte](https://github.com/onwijsbegeerte)
-    - [bad export pod placeholder text](https://github.com/dendronhq/dendron/issues/270)
-- [agichim ](https://github.com/agichim)
-    - [checkbox in preview doesn't render correctly](https://github.com/dendronhq/dendron/issues/269)
-- [Emaro](https://github.com/Emaro)
-    - [treeview empty in certain cases](https://github.com/dendronhq/dendron/issues/263)
-- [robothor](https://github.com/robothor)
-    - [issue refactoring with mixed case filenames](https://github.com/dendronhq/dendron/issues/250)
+    - [Don't throw an exception when trying to create special notes when no note is opened](https://github.com/dendronhq/dendron/pull/285)
+    - [Create daily journal note without requiring active text editor](https://github.com/dendronhq/dendron/issues/122)
+    - [Fix extra folders being created with Doctor Command](https://github.com/dendronhq/dendron/pull/293)
+- [seedublancaster](https://github.com/seedublancaster)
+    - [fix typos](https://github.com/dendronhq/dendron/pull/323)
+- [Luke Carrier](https://github.com/LukeCarrier)
+    - [update type definitions](https://github.com/dendronhq/dendron/pull/323)
+    - [preserve abbreviations when publishing](https://github.com/dendronhq/dendron/pull/260)
+- [huwm](https://github.com/huwm)
+    - [Notes opened from the dendron tree view are replaced with blank notes](https://github.com/dendronhq/dendron/issues/312)
+- [agichim](https://github.com/agichim)
+    - [Checkboxes in tables in Preview mode don't render correctly](https://github.com/dendronhq/dendron/issues/269)
 
+### Changelog
 
-((ref: [[dendron.release.changelog]]))
+((ref: [[dendron.release.changelog]]#13.6:#0.12.11))

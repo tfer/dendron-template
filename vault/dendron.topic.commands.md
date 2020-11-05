@@ -8,6 +8,19 @@ created: 1595261816971
 
 # Commands
 ---
+## Lookup
+### Contribute
+- shortcuts: none
+
+
+Become an environmentalist and keep Dendron sustainable
+
+ This command takes you to Dendron's [Environmentalist](https://accounts.dendron.so/account/subscribe) plans.
+Environmentalists are users that can support Dendron financially through a monthly contribution. Environmentalist get access to insider builds, priority support, and access to exclusive dev channels. 
+
+
+
+---
 ## Notes
 ### Create Daily Journal Note
 - shortcuts: 
@@ -261,9 +274,28 @@ Create a new workspace
 
 Change into existing workspace
 
- Dendron will create a `dendron.code-workspace` file in specified directory and then open the workspace (if a workspace file already exists, it will use that). It will also create a `root.md` file in that directory if it doesn't exist (currently this is part of the internal working of dendron).
 
-Dendron **does not** delete or overwrite any files during the **Change Workspace** operation. 
+
+
+
+### Snapshot Vault
+- shortcuts: none
+
+
+Create a snapshot of your vault
+
+ Takes a snapshot of your entire vault, including assets. This command will ignore version control folders like .git when making a snapshot.
+Snapshots are saved under {workspace}/snapshots/{timestamp} 
+
+
+
+### Restore Vault
+- shortcuts: none
+
+
+Restore your vault from a snapshot
+
+ Restores your vault based on a snapshot. When restoring, it will over-write any notes that have the same name as notes in the snapshot. It will ignore version control directories like .git when restoring your vault 
 
 
 
@@ -353,8 +385,6 @@ Build, commit and publish your notes with a single command
 
 <a href="https://www.loom.com/share/c58edf543e234a8fa164095237579ccc"> <img style="" src="https://cdn.loom.com/sessions/thumbnails/c58edf543e234a8fa164095237579ccc-with-play.gif"> </a>
 
----
-## Lookup
 ---
 ## Dev
 ### Doctor
