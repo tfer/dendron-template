@@ -106,7 +106,7 @@ Note that the *hover* text will display if you hover your mouse your mouse over 
 
 ### Why do I see an Alert instead of the "poster" for a video?
 
-![MPE Alert for videos](assets\images\MPE_Alert_for _videos.PNG)
+![MPE Alert for videos](https://github.com/tfer/dendron-template.git/vault/assets/images/MPE_Alert_for _videos.PNG)
 
 Webview, the browser component VSCode uses for **MPE**, does not support the playing of any videos, it will display the "start-poster", (if one is specified), which will open the video in your default browser when clicked.  The Alert displays when no poster has been specified.
 
