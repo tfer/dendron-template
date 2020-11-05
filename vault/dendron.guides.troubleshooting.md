@@ -97,14 +97,16 @@ Meanwhile, you can open Dendron's markdown preview by clicking the preview butto
 Webview, the browser component VSCode uses for **MPE**, (**M**arkdown **P**review **E**nhanced), does not support SVG images, but they will appear in your published/hosted notes. To get **MPE** to let you know that an SVG image is present, and should appear here when the notes published/hosted, don't leave the alternative text blank.  This will cause **MPE** to display the icon for a broken graphic link.
 
 Here is an example:  
-     `![SVG image, not shown by MPE](\assets\images\assets\images\assets\images\markdown-mark-white.svg "Large 'M' followed by downpointing arrow")`
+     `![SVG image, not shown by MPE](assets\images\markdown-mark-white.svg "Large 'M' followed by downpointing arrow")`
 
 And here is what **MPE** displays:  
-     ![SVG image, not shown by MPE](\assets\images\assets\images\assets\images\markdown-mark-white.svg "Large 'M' followed by downpointing arrow")
+     ![SVG image, not shown by MPE](assets\images\markdown-mark-white.svg "Large 'M' followed by downpointing arrow")
 
 Note that the *hover* text will display if you hover your mouse your mouse over the "broken graphic" icon above.
 
 ### Why do I see an Alert instead of the "poster" for a video?
+
+![MPE Alert for videos](assets\images\MPE_Alert_for _videos.PNG)
 
 Webview, the browser component VSCode uses for **MPE**, does not support the playing of any videos, it will display the "start-poster", (if one is specified), which will open the video in your default browser when clicked.  The Alert displays when no poster has been specified.
 
