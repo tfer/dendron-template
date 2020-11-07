@@ -2,20 +2,21 @@
 id: b0fe6ef7-1553-4280-bc45-a71824c2ce36
 title: Dendron
 desc: ''
-updated: 1603579191402
+updated: 1604248143373
 created: 1595952505017
 stub: false
 ---
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 <div class="alert alert-primary" role="alert">
-<a href="https://dendron.so/notes/1b1aef8e-c9d5-42de-b850-d1b1467cf88b.html">Version 0.13</a> has planted 🌱 
+<a href="https://dendron.so/notes/98ad9b6b-53f3-4883-939e-e14055f2cac7.html">Version 0.14</a> has sprouted 🌱 
 Read about the new features and fixes in our release notes
 </div>
+<div class="alert alert-primary" role="alert">
+Dendron is now out of preview. We also launched on <a href="https://www.producthunt.com/posts/dendron?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dendron">Product Hunt</a>. Please leave us feedback there to spread the word!</div>
 
 # Dendron
 
@@ -31,7 +32,7 @@ I originally created Dendron because I'd accumulated over **20k notes** on progr
 
 Traditional note-taking tools are often **too rigid** by having an in-flexible hierarchy that doesn't let you file a note in multiple places. Newer tools are **too flexible** by eschewing hierarchies altogether in favour of relying solely on backlinks. 
 
-Dendron finds the **usable center** between the two extremes by supporting the linking of any two arbitrary notes through backlinks while also maintaining a **canonical hierarchy** for every note. We do this through our **[hierarchal first approach to note taking](https://www.kevinslin.com/notes/3dd58f62-fee5-4f93-b9f1-b0f0f59a9b64.html)** that relies on the combination of [[hierarchies|dendron.topic.hierarchies]], [[schemas|dendron.topic.schema]], and [[path based lookups| dendron.topic.lookup]]. 
+Dendron finds the **usable center** between the two extremes by supporting backlinks of any two arbitrary notes while also maintaining a **canonical hierarchy** for every note. We do this through our **[hierarchal first approach to note taking](https://www.kevinslin.com/notes/3dd58f62-fee5-4f93-b9f1-b0f0f59a9b64.html)** that relies on the combination of [[hierarchies|dendron.topic.hierarchies]], [[schemas|dendron.topic.schema]], and [[path based lookups| dendron.topic.lookup]]. 
 
 With Dendron, you can **create, find, and collaborate** on information that **matters to you**.
 
@@ -44,6 +45,7 @@ Whether you organize your notes with [PARA](https://fortelabs.co/blog/para/) or 
 Think of it as a [second brain](https://www.buildingasecondbrain.com/) to help you **make sense** of all the information you care about.
 
 Some popular use cases include:
+
 - project management 
 - learning & academia
 - personal knowledge base 
@@ -51,9 +53,9 @@ Some popular use cases include:
 - CRM to keep track of clients, friends and enemies
 - {Your Use Case Here}
 
-## Getting Started 
+## Getting Started
 
-((ref:[[dendron.install]]#Getting Started,1:#Install))
+((ref:[[dendron.guides.install]]#Getting Started,1:#Install))
 
 ## Onboarding
 
@@ -69,18 +71,17 @@ You can find a rough transcript of this onboarding [[here|dendron.ref.transcript
 
 To stay up to date on Dendron developments and all things knowledge management, you can follow us at [@dendronhq](https://twitter.com/dendronhq) or join us on [discord](https://discord.gg/6j85zNX)! 
 
-
 ## Features
 
 See our core [[features | dendron.features]] that help you manage your notes.
 
 ## Getting Started
+
 To get started, you can follow the instructions in [[quickstart | dendron.quickstart]].
 
 ## Motivation
 
 > "We are overwhelmed with information and we don't have the tools to properly index and filter through it. [The development of these tools, which] will give society access to and command over the inherited knowledge of the ages [should] be the first objective of our scientist" - Vannevar Bush, 1945
-
 
 ## You Are Here
 
@@ -101,3 +102,4 @@ We welcome community contributions and pull requests. See [CONTRIBUTING](https:/
 Dendron is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE Version 3.
 
 See [LICENSE](https://github.com/dendronhq/dendron/blob/master/LICENSE.md) and [NOTICE](https://github.com/dendronhq/dendron/blob/master/NOTICE.md) for more information.
+
